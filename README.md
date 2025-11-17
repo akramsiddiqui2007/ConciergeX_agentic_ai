@@ -6,7 +6,7 @@ Google ADK Capstone Project
 ## Overview
 
 ConciergeX is a multi-agent agentic AI system built using the Google Agent Development Kit (ADK) and the Gemini-2.5-Flash-Lite model.  
-It acts as a personal learning concierge capable of:
+It acts as a personal learning and travel planning concierge capable of:
 
 - Creating multi-week study plans  
 - Converting weekly plans into daily agendas  
