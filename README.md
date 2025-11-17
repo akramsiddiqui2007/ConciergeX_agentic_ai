@@ -278,25 +278,30 @@ Detects and calls the local A2A server at http://localhost:8001/execute.
 
 # Running the Application via Docker
 Pull the imange from DockerHub:
+ 
   docker login
+  
   docker pull YOUR_DOCKERHUB_USERNAME/conciergex-agentic-ai:latest
 
 This will:
 Use python:3.10-slim
+
 Install dependencies from requirements.txt
+
 Copy the entire project into /app
+
 Run start.sh as container entrypoint
+
 
 
 ## Run the Container
 You must pass your Gemini API key as an environment variable:
-docker run \
-  -p 8501:8501 \
-  -p 8001:8001 \
-  -e KEY_VARIABLE="<>" \
-  conciergex_app
 
-## Note: Privide your Gemini API Variable and Key.
+docker run -p 8501:8501 -p 8001:8001 -e KEY_VARIABLE="<>" conciergex_app
+
+
+
+### Note: Privide your Gemini API Variable and Key.
 
 
 # App URL: http://localhost:8501/
