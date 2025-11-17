@@ -249,3 +249,61 @@ flowchart TD
 
 ```
 
+
+# Streamlit Tabs Overview
+
+The UI contains several tabs:
+
+1. 🧠 Orchestrator Chat
+Free-form chat with the OrchestratorAgent (multi-agent routing).
+
+2. 📅 Planning
+Forces the PlanningAgent via [force_planning] tag.
+
+3. 🗓️ Agenda
+Forces the AgendaAgent via [force_agenda], converting plans into daily schedule.
+
+4. 📋 Tasks
+Invokes task management via [force_tasks].
+
+5. 🚨 Guardrails
+Tests hard guardrails (medical, illegal requests).
+
+6. 🔗 Pipeline
+Runs a full flow: Planning → Agenda.
+
+7. 🔌 A2A Agent
+Detects and calls the local A2A server at http://localhost:8001/execute.
+
+
+# Running the Application via Docker
+Pull the imange from DockerHub:
+  docker login
+  docker pull YOUR_DOCKERHUB_USERNAME/conciergex-agentic-ai:latest
+
+This will:
+Use python:3.10-slim
+Install dependencies from requirements.txt
+Copy the entire project into /app
+Run start.sh as container entrypoint
+
+
+## Run the Container
+You must pass your Gemini API key as an environment variable:
+docker run \
+  -p 8501:8501 \
+  -p 8001:8001 \
+  -e KEY_VARIABLE="<>" \
+  conciergex_app
+
+## Note: Privide your Gemini API Variable and Key.
+
+
+# App URL: http://localhost:8501/
+
+
+<img width="657" height="1000" alt="image" src="https://github.com/user-attachments/assets/4e187965-56ed-4960-8247-f24fe2d72f70" />
+
+
+
+
