@@ -92,9 +92,7 @@ conciergex_agentic_ai/
 ├── evals/
 │   └── conciergex_eval.yaml
 │
-├── run_eval.py
 ├── README.md
-└── ConciargeX.ipynb
 
 ```
 
